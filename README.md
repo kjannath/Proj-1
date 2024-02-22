@@ -30,16 +30,31 @@ and test the class in a file named **main.cpp**.
 Detailed requirements: 
 
 1. The **BigInt** class represents a potential very large integer values, by storing its decimal digits in a list (using **SLList**). 
-2. Implement  **output** member function for **BigInt**, for displaying the big integer in the terminal
-3. Implement **add** static member function for adding two **BigInt** objects and returning the resulting value as a **BigInt**.
-4. Implement **substract**  member function for substracting one **BigInt** from another, and return the result as a **BigInt**.
+2. Implement a **output** member function for **BigInt**, for displaying the big integer in the terminal
+3. Implement a static member function named **add** for adding two **BigInt**.
+4. Implement a static member function named **substract** for substracting one **BigInt** from another **BigInt**.
 
    
 ## Hints
 
 The **main.cpp** provided in this repository tests the above member functions ...
 
+```
+ ds::BigInt a("1234567890123");
+  ds::BigInt b("1567890123");
 
+  a.output(); //this should display a's value: 1234567890123
+
+  ds:BigInt r;
+  BigInt::add (a, b, r);
+
+  r.output ();  //This should display 1236135780246
+
+  ds:BigInt r2;
+  BigInt::substract (a,b,r2);
+
+  r2.output (); //This should display 123000000000
+```
 
 ## Submission 
 
