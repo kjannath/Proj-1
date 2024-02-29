@@ -84,6 +84,15 @@ string input1,input2, op;
    }
 ```
 
+## Style ##
+
+The coding style part is worth 20 points. The rubrics for the style requirement is as follows: 
+
+* Insufficient or no comments: -1 point (-2 max)
+* Code not indented correctly: -1 point (-2 max)
+* Redundant code: -1 point (-2 max)
+* Overly complicated code: -1 point (-2 max)
+
 ## Submission 
 
 Submit your **BigInt.h**, **BigInt.cpp** file at the following link by March 8th, Friday, midnight (11:59pm). 
@@ -91,4 +100,6 @@ Submit your **BigInt.h**, **BigInt.cpp** file at the following link by March 8th
 [Project1 submission link](https://storm.cis.fordham.edu:8443/web/project/1764)
 
 The autograder compiles and tests your programs using the testcases listed in **testcases.txt**. You can find the expected output for each case in this file.
+
+
 
