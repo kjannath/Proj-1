@@ -5,7 +5,6 @@
 
 using namespace std;
 
-#define SIZE 10
 
 int main()
 {
@@ -15,12 +14,11 @@ int main()
   a.output(); //this should display a's value: 1234567890123
 
   ds:BigInt r;
-  BigInt::add (a, b, r);
-
+  ds::BigInt::add (a,b,r);
   r.output ();  //This should display 1236135780246
 
   ds:BigInt r2;
-  BigInt::substract (a,b,r2);
+  ds::BigInt::subtract (a,b,r2);
   
   r2.output (); //This should display 123000000000
 
