@@ -56,11 +56,39 @@ The **main.cpp** provided in this repository tests the above member functions ..
   r2.output (); //This should display 123000000000
 ```
 
+The **test.cpp** provides another more flexbile way to test your **BigInt** class: 
+```
+string input1,input2, op;
+
+  cin >> op;
+  cin >> input1;
+  cin >> input2;
+
+  ds::BigInt a(input1);
+  ds::BigInt b(input2);
+
+  if (op=="add")
+  {
+        ds::BigInt r;
+        ds::BigInt::add (a, b, r);
+
+        r.output ();
+  }
+  else if (op=="subtract")
+  {
+        //assume a>=b
+        ds::BigInt r2;
+        ds::BigInt::subtract (a,b,r2);
+
+        r2.output ();
+   }
+```
+
 ## Submission 
 
 Submit your **BigInt.h**, **BigInt.cpp** file at the following link by March 8th, Friday, midnight (11:59pm). 
 
 [Project1 submission link](https://storm.cis.fordham.edu:8443/web/project/1764)
 
-The autograder compiles and tests your programs using some testcases that are different from those in **main.cpp**. If your program fails some testcases, go back to review your code, and test your member functions
-with different inputs.
+The autograder compiles and tests your programs using the testcases listed in **testcases.txt**. You can find the expected output for each case in this file.
+
