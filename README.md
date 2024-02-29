@@ -46,22 +46,21 @@ The **main.cpp** provided in this repository tests the above member functions ..
   a.output(); //this should display a's value: 1234567890123
 
   ds:BigInt r;
-  BigInt::add (a, b, r);
+  ds::BigInt::add (a, b, r);
 
   r.output ();  //This should display 1236135780246
 
   ds:BigInt r2;
-  BigInt::substract (a,b,r2);
+  ds::BigInt::subtract (a,b,r2);
 
   r2.output (); //This should display 123000000000
 ```
 
 ## Submission 
 
-Submit your **BigInt.h**, **BigInt.cpp** file at the following link by xxxxx midnight (11:59pm). 
+Submit your **BigInt.h**, **BigInt.cpp** file at the following link by March 8th, Friday, midnight (11:59pm). 
 
 [Project1 submission link](https://storm.cis.fordham.edu:8443/web/project/1764)
-The autograder compiles and tests your programs using 
 
-some testcases that are different from those in **main.cpp**. If your program fails some testcases, go back to review your code, and test your member functions
+The autograder compiles and tests your programs using some testcases that are different from those in **main.cpp**. If your program fails some testcases, go back to review your code, and test your member functions
 with different inputs.
