@@ -31,16 +31,25 @@ Detailed requirements:
 
 1. The **BigInt** class represents a potential very large integer values, by storing its decimal digits in a list (using **SLList**). 
 2. Implement a **output** member function for **BigInt**, for displaying the big integer in the terminal
-3. Implement a static member function named **add** for adding two **BigInt**.
-4. Implement a static member function named **substract** for substracting one **BigInt** from another **BigInt**.
+3. Implement a **static** member function named **add** for adding two **BigInt**.
+4. Implement a static member function named **subtract** for substracting one **BigInt** from another **BigInt**.
 
+## Hints:
+ 1. Note that **BigInt** uses **SLList**'s public methods to manipulate the digits of the big integer. 
+ 2. It's much easier to implement **add** and **subtract** if you store the ones digit in 0th position of the **SLList**, and the 10th digit in 1th position...
+    So that if you call **get(i)** on the **SLList** object, you retrieve the i-th digit (from the right) for the number. 
+ 4. When implementing **output**, you can first output the last digit in the **SLList** (which is the most significant digits), and then the second last digit, ... and output the first digit in the list last.
    
-## Hints
+## Requirement
 
-The **main.cpp** provided in this repository tests the above member functions ...
+Instead of specifying what constructors and member functions you need to implement, the **main.cpp** provided in this repository 
+demonstrated how the **BigInt** class is used. **Please try your best to figure out what member functions are required, and what their
+function signature should be from the user code. One example is commented below for a constructor:** 
 
 ```
- ds::BigInt a("1234567890123");
+  ds::BigInt a("1234567890123");
+     //This implies that we should provide a constructor that takes a string as parameter
+      //This constructor should initialize a to represent a big integer of value: 1234567890123
   ds::BigInt b("1567890123");
 
   a.output(); //this should display a's value: 1234567890123
