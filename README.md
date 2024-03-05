@@ -39,6 +39,27 @@ Detailed requirements:
  2. It's much easier to implement **add** and **subtract** if you store the ones digit in 0th position of the **SLList**, and the 10th digit in 1th position...
     So that if you call **get(i)** on the **SLList** object, you retrieve the i-th digit (from the right) for the number. 
  4. When implementing **output**, you can first output the last digit in the **SLList** (which is the most significant digits), and then the second last digit, ... and output the first digit in the list last.
+ 5. Pseudocode for **add** as explained in class (March 5th) with more details:
+    ```
+    void add (const BigInt & a, const BigInt & b, BigInt & c)
+    {
+    //pseudocode for adding BigInt a, b, and save it to BigInt c 
+    c = (a.length()>b.length)?a:b; //assign the one with more digits to c 
+    BigInt & d = (a.length()>b.length)?b:a;   //d is referring to the one with few digits,
+           //no copy is being made here, d just referring to b or a...
+    carry=0 
+    for i=0;i<d.length();i++:
+       d1 = get i-th digit of d
+       d2 = get i-th digit of c
+       sum = d1+d2+carry
+
+       carry = sum/10
+       sum = sum%10
+       set the i-th digit of c to sum //c.digits.get(i)=sum 
+
+    if carry!=0:
+       add carry to the back of c.digits //c.digits.addBack (carry)
+    ```
    
 ## Requirement
 
