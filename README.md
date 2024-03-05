@@ -41,26 +41,42 @@ Detailed requirements:
  4. When implementing **output**, you can first output the last digit in the **SLList** (which is the most significant digits), and then the second last digit, ... and output the first digit in the list last.
  5. Pseudocode for **add** as explained in class (March 5th) with more details:
     ```
-    void add (const BigInt & a, const BigInt & b, BigInt & c)
+    void add (const BigInt & a1, const BigInt & a2, BigInt & c)
     {
        //pseudocode for adding BigInt a, b, and save it to BigInt c 
-       c = (a.length()>b.length)?a:b; //assign the one with more digits to c 
-       BigInt & d = (a.length()>b.length)?b:a;   //d is referring to the one with few digits,
-           //no copy is being made here, d just referring to b or a...
-       carry=0 
-       for i=0;i<d.length();i++:
-          d1 = get i-th digit of d
-          d2 = get i-th digit of c
+       c = (a1.digits.size()>a2.digits.size())?a1:a2; //assign the one with more digits to c
+    
+       BigInt & d = (a1.digits.size()>a2.digits.size())?a2:a1;   //d is referring to the one with few digits,
+           //no copy is being made here, d just referring to a2 or a1...
+    
+       carry=0
+       int i=0; //pointing to which digit are we adding now
+
+       while (i<d.length() || carry!=0) //This loop ends when we finish processing d's digits, and there is no carry any more
+       {
+          if (i<d.digits.size())  //not done with d yet ... 
+              d1 = get i-th digit of d
+          else
+              d1 = 0 
+
+          if (i<c.digits.size()) 
+               d2 = get i-th digit of c
+          else
+               d2 = 0 
           sum = d1+d2+carry
 
           carry = sum/10
           sum = sum%10
-          set the i-th digit of c to sum //c.digits.get(i)=sum 
-      //end of for loop
+          if (i < c.digits.size()) //c has i-th digit 
+               set the i-th digit of c to sum //c.digits.get(i)=sum
+          else
+               add sum to the end of c.digits //using addBack member function of SLList
+
+           i++  //move to the next digit 
+       }
     
-      if carry!=0:
-         add carry to the back of c.digits //c.digits.addBack (carry)
-    }
+
+     }
     ```
    
 ## Requirement
