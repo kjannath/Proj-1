@@ -46,7 +46,7 @@ Detailed requirements:
        //pseudocode for adding BigInt a, b, and save it to BigInt c 
        c = (a1.digits.size()>a2.digits.size())?a1:a2; //assign the one with more digits to c
     
-       BigInt & d = (a1.digits.size()>a2.digits.size())?a2:a1;   //d is referring to the one with few digits,
+       BigInt & d = (a1.digits.size()>a2.digits.size())?a2:a1;   //d is referring to the one with fewer digits,
            //no copy is being made here, d just referring to a2 or a1...
     
        carry=0
