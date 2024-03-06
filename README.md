@@ -32,7 +32,8 @@ Detailed requirements:
 1. The **BigInt** class represents a potential very large integer values, by storing its decimal digits in a list (using **SLList**). 
 2. Implement a **output** member function for **BigInt**, for displaying the big integer in the terminal
 3. Implement a **static** member function named **add** for adding two **BigInt**.
-4. Implement a static member function named **subtract** for substracting one **BigInt** from another **BigInt**.
+4. Implement a static member function named **subtract** for substracting one **BigInt** from another **BigInt**. **You can assume that if the result is always positive or zero (i.e.,
+   it won't be called to subtract a larger number from a smaller number.**
 
 ## Hints:
  1. Note that **BigInt** uses **SLList**'s public methods to manipulate the digits of the big integer. 
