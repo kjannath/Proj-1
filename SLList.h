@@ -70,6 +70,43 @@ public:
     p->next = new Node<ItemType>(x, nullptr);
   }
 
+  SLList<ItemType> & operator= (const SLList<ItemType> & rhs)
+  {
+      //Delete the current link list
+      count = 0;
+      while (sentinel != nullptr) {
+        Node<ItemType> *curr = sentinel;
+        sentinel = sentinel->next;
+        delete curr;
+      }
+
+     /** going through every one of rhs
+      make a copy of the node in current list */
+        Node<ItemType> * p = rhs.sentinel;
+        Node<ItemType> * prev = nullptr;
+
+        int pos=0;
+
+        while (p!=nullptr)
+        {
+                Node<ItemType> * newNode = new Node<ItemType> (p->item, nullptr);
+
+                if (pos==0)
+                        sentinel = newNode;
+                else
+                        prev->next = newNode;
+
+                prev = newNode; //the newNode becomes previous node...
+                pos++;
+
+                //move to next node in other
+                p = p->next;
+        }
+
+        count = rhs.count;
+
+        return *this;
+  }
 
   inline SLList(const SLList<ItemType> &other);
   inline ItemType &get(int i) const;
