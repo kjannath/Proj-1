@@ -143,7 +143,7 @@ The coding style part is worth 20 points. The rubrics for the style requirement 
 
 ## Submission 
 
-Submit your **BigInt.h**, **BigInt.cpp** file at the following link by March 8th, Friday, midnight (11:59pm). 
+Submit your **BigInt.h**, **BigInt.cpp** file at the following link by March 10th, Sunday, midnight (11:59pm). 
 
 [Project1 submission link](https://storm.cis.fordham.edu:8443/web/project/1764)
 
