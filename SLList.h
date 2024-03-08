@@ -134,7 +134,7 @@ SLList<ItemType>::SLList(const SLList<ItemType> &other) {
   
   while (p!=nullptr) 
   {
-        cout <<"Copying node"<<p->item<<endl;
+        //cout <<"Copying node"<<p->item<<endl;
 	Node<ItemType> * newNode = new Node<ItemType> (p->item, nullptr);
  
         if (pos==0)
