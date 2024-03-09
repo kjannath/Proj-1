@@ -13,7 +13,7 @@ int main()
 
   a.output(); //this should display a's value: 1234567890123
 
-  ds:BigInt r;
+  ds::BigInt r;
   ds::BigInt::add (a,b,r);
   r.output ();  //This should display 1236135780246
 
