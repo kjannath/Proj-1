@@ -20,7 +20,7 @@ int main()
   ds:BigInt r2;
   ds::BigInt::subtract (a,b,r2);
   
-  r2.output (); //This should display 123000000000
+  r2.output (); //This should display 123300000000
 
   
  
