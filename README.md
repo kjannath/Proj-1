@@ -11,7 +11,7 @@ rest of the code.
 From your terminal (mac or WSL/Ubunto) window, you can use the following command to download it:
 
 ```
-git clone https://github.com/CISC2200-Fall-24-Fordham/proj1.git
+git clone https://github.com/CISC2200-Fall-24-Fordham/Proj-1.git
 ```
 
 ## Programming Environment Setup
