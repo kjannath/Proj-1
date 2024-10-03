@@ -21,18 +21,14 @@ int main()
 
   if (op=="add")
   {
-  	ds::BigInt r;
-  	ds::BigInt::add (a, b, r);
-
-  	r.output ();  
-  } 
+  	ds::BigInt r = a + b;
+  	r.output();
+  }
   else if (op=="subtract")
   {
 	//assume a>=b
-  	ds::BigInt r2;
-  	ds::BigInt::subtract (a,b,r2);
-  
-  	r2.output (); 
+  	ds::BigInt r2 = a - b;
+  	r2.output();
    }
 
 }
