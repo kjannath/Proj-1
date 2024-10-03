@@ -100,7 +100,7 @@ make test.out
 ./test.out
 ```
 
-> [!NOTE]:
+> [!NOTE]
 > Your code may appear to hang / not output anything. This is because it is waiting for your input!
 
 ## Style
