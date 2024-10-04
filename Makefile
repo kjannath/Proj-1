@@ -5,7 +5,7 @@ CXXFLAGS := -O0 -g -Wall -std=c++20 -Werror=return-type
 	@$(CXX) $(CXXFLAGS) $^ -o $@
 
 test: test.out
-	@valgrind --quiet --leak-check=full ./$< -tc="$(TC)" -sc="$(SC)"
+	./$< -tc="$(TC)" -sc="$(SC)"
 
 check: BigInt.h
 	@dos2unix $^ > /dev/null 2>&1

@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
   "build": {
-      "dockerfile": "Dockerfile",
+      "dockerfile": "Dockerfile"
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -15,7 +15,8 @@
         "streetsidesoftware.code-spell-checker",
         "ms-vsliveshare.vsliveshare",
         "ms-vscode.cpptools-extension-pack",
-        "ms-vscode.makefile-tools"
+        "ms-vscode.makefile-tools",
+        "ms-azuretools.vscode-docker"
       ]
     }
   }
