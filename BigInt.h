@@ -69,6 +69,7 @@ ds::BigInt::BigInt(std::string str)
 void ds::BigInt::add(const BigInt& a, const BigInt& b, BigInt& result) const
 {
   // TODO: Implement this
+    result.digits.clear();
     int carry = 0;
     size_t maxSize = std::max(a.digits.size(), b.digits.size());
 
@@ -93,6 +94,7 @@ void ds::BigInt::add(const BigInt& a, const BigInt& b, BigInt& result) const
 void ds::BigInt::subtract(const BigInt& a, const BigInt& b, BigInt& result) const
 {
   // TODO: Implement this 
+  result.digits.clear();
   int borrow = 0;
 
   for (size_t i = 0; i < a.digits.size(); ++i){
